@@ -1,0 +1,62 @@
+// Single ton Class;
+
+public class Singelton{
+private final static Singleton instance = new Singleton();
+private Singleton(){}
+public static Singleton getInstance(){
+return instance;
+}
+}
+
+=========== Second Type ==========
+
+public class Singleton{
+private static Singleton instance;
+private Singleton(){}
+public static Singleton getInstance(){
+if(instance == null){
+instance = new Singleton();
+}
+return instance;
+}
+}
+
+public class Singleton {
+private static Singleton instance;
+private Singleton(){}
+public static synchronized Singleton getInstance(){
+if(instance == null){
+instance = new Singleton();
+}
+return instance;
+}
+
+
+public class Singleton {
+private static Singleton instance;
+private Singleton(){}
+public static Singleton getInstance(){
+if(instance == null){
+synchronized (Singleton.class){
+if(instance == null){
+instance = new Singleton();
+}
+}
+}
+return instance;
+}
+}
+
+why are there different types of singleton implementations?
+Different types of singleton implementations exist to address various requirements and constraints, such as thread safety, performance, and resource management. Here are some reasons for the different implementations:
+1. Eager Initialization: This implementation creates the singleton instance at the time of class loading. It
+is simple and thread-safe but may lead to resource wastage if the instance is never used.
+2. Lazy Initialization: This implementation creates the singleton instance only when it is needed. It saves resources but requires additional synchronization to ensure thread safety.
+3. Thread Safety: In multi-threaded environments, it is crucial to ensure that only one instance of the singleton is created. Different implementations use various synchronization techniques to achieve this, such as synchronized
+methods or double-checked locking.
+4. Performance: Some implementations prioritize performance by minimizing synchronization overhead, especially in high-concurrency scenarios.
+5. Serialization: Some singleton implementations need to handle serialization and deserialization to ensure that the singleton property is maintained across different states.
+Overall, the choice of singleton implementation depends on the specific use cases and requirements of the application.
+
+
+

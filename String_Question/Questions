@@ -1,0 +1,32 @@
+Easy Level:
+Reverse a String
+Input: "hello" → Output: "olleh"
+
+Check if a String is Palindrome
+Input: "racecar" → Output: true
+
+Count occurrence of a character in a String
+Input: "hello", Character: 'l' → Output: 2
+
+Medium Level:
+Find Duplicate Characters in a String
+Input: "programming" → Output: 'r', 'g', 'm'
+
+Check if two strings are Anagrams
+Input: "listen", "silent" → Output: true
+
+Remove Duplicate Characters from String
+Input: "banana" → Output: "ban"
+
+Advanced Level:
+Find the First Non-Repeated Character
+Input: "stress" → Output: 't'
+
+Longest Substring Without Repeating Characters
+Input: "abcabcbb" → Output: "abc" (length 3)
+
+Check if String has Balanced Parentheses
+Input: "()[{}]" → Output: true
+
+String Compression (Run-Length Encoding)
+Input: "aaabbbcc" → Output: "a3b3c2"
